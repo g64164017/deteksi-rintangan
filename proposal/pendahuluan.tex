@@ -1,0 +1,42 @@
+%----------------------------------------------------------------------------------------
+%	PENDAHULUAN
+%----------------------------------------------------------------------------------------
+\section*{PENDAHULUAN} % Sub Judul PENDAHULUAN
+% Tuliskan isi Pendahuluan di bagian bawah ini. 
+% Jika ingin menambahkan Sub-Sub Judul lainnya, silakan melihat contoh yang ada.
+% Sub-sub Judul 
+\subsection*{Latar Belakang}
+Setiap individu selalu berinteraksi terhadap lingkungan dalam setiap aktivitasnya. Salah satunya saat berjalan, manusia umumnya mengidentifikasi objek di sekitarnya sebelum menentukan arah geraknya. Hal ini kerap menjadi kesulitan bagi beberapa orang utamanya penyandang tuna netra.
+
+
+Salah satu pendekatan yang dapat dilakukan adalah dengan pemanfaatan teknologi penginderaan komputer \textit{(computer vision)}. \citeauthor{rajput2014smart} (\cite*{rajput2014smart}) telah meneliti dan mengembangkan \textit{Smart Object Detector (SOD)} berupa tongkat yang menggunakan software MATLAB untuk memproses video secara efisien dan cepat untuk mendeteksi objek, mengkombinasikannya dengan sensor ultrasonik untuk mengukur jarak objek kemudian mengkonversinya menjadi suara dan getaran.
+
+\citeauthor{Yi2013} (\cite*{Yi2013}) mengumpulkan data objek yang kerap dijumpai dan mengaplikasikan \textit{Speeded-Up Robust
+Features and Scale Invariant Feature Transform (SURF/SIFT)} pada citra-citra yang dibagikan sekumpulan kamera dalam sistem jaringan untuk mengenali objek-objek tersebut.
+
+\citeauthor{wang2014rgb} (\cite*{wang2014rgb}) mengimplementasi transformasi Hough pada kanal RGB untuk mengekstraksi garis-garis paralel citra sebagai fitur identifikasi tangga dan penyeberangan \textit{zebra cross}. Objek tangga kemudian dibedakan ke dalam tangga naik dan tangga turun menggunakan pengklasifikasian SVM.
+
+Penelitian ini bertujuan untuk membuat alat pendeteksi rintangan bagi pejalan kaki utamanya penyandang tuna netra menggunakan kamera tunggal sebagai input, dan suara sebagai output. Output dapat berupa nada \textit{low tone} yang bervariasi berdasarkan jenis objek dan estimasi jarak.
+
+% Sub-sub Judul 
+\subsection*{Tujuan}
+
+Tujuan dari penelitian ini adalah:
+\begin{enumerate}[noitemsep] 
+\item Membuat prototipe software pendeteksi rintangan dan lajur pejalan kaki.
+\item Mengukur akurasi pengenalan objek.
+\end{enumerate}
+
+\subsection*{Ruang Lingkup}
+
+Ruang lingkup penelitian adalah:
+\begin{enumerate}[noitemsep] 
+\item Lokasi pengujian memiliki intensitas cahaya minimal 100 lux.
+\item Objek yang diidentifikasi diklasifikasikan ke dalam objek umum seperti manusia, tangga, dan pintu. Objek selainnya dikelompokkan ke dalam objek bergerak dan objek diam.
+\item Output suara berupa \textit{tone} rendah yang bervariasi berdasarkan jenis dan estimasi jarak.
+\item Produk yang dihasilkan adalah berupa prototipe program komputer.
+\end{enumerate}
+
+\subsection*{Manfaat}
+
+Hasil penelitian diharapkan dapat membantu pejalan kaki terutama penyandang tuna netra untuk dapat meningkatkan kewaspadaan dan sebagai pemandu saat berjalan.

@@ -1,0 +1,152 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template ini dibuat untuk makalah kolokium mahasiswa
+% Program Alih Jenis (Ekstensi) Ilmu Komputer IPB
+% Version 1.0 (18/05/2015)
+%
+% Template ini menggunakan template yang di-download dari:
+% http://www.LaTeXTemplates.com
+% Mathias Legrand (legrand.mathias@gmail.com)
+% License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Dimodifikasi untuk keperluan Program Studi
+% Oleh: JULIO ADISANTOSO (julioipb@gmail.com)
+%
+% Untuk memudahkan penggunaan, maka diambil contoh makalah atas nama 
+% Fithranto Faturakhman di bawah bimbingan Karlisa Priandana ILKOM-IPB.
+% Silakan mengganti dan melengkapi file:
+%    (1) kolokium_information.tex -- judul, nama, nim, email, pembimbing, dsb
+%    (2) abstrak.tex -- abstrak makalah
+%    (3) pendahuluan.tex -- berisi latar belakang, dsb
+%    (4) metode.tex -- berisi metode penelitian
+%    (5) pustaka.bib -- berisi daftar pustaka
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,11pt]{SelfArx} % Document font size and equations flushed left
+\input{kolokium_layout}
+\input{hype_indonesia}
+\input{kolokium_information}
+\usepackage{xcolor,colortbl}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{graphicx,xcolor}
+\graphicspath{{gambar/}}
+
+\usepackage[urldate=comp, backend=biber, style=authoryear, url=true, doi=true, maxbibnames=4, maxcitenames=2, block=none, sorting=nyt]{biblatex}
+\usepackage{xpatch}
+\addbibresource{pustaka.bib}
+\DefineBibliographyStrings{english}{%
+	and = {dan}
+}
+\DefineBibliographyStrings{english}{%
+	andothers = {\em et\addabbrvspace al\adddot}
+}
+\renewbibmacro{in:}{
+	\iffieldundef{journaltitle}
+	{}
+	{\xspace dalam:}
+}
+\renewbibmacro*{volume+number+eid}{%
+	\printfield{volume}%
+	%  \setunit*{\adddot}% DELETED
+	\setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+	\printfield{number}%
+	\setunit{\addcomma\space}%
+	\printfield{eid}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+\DeclareFieldFormat{url}{\printtext{Dapat diunduh dari}\addcolon\space\url{#1}}
+%\DeclareFieldFormat{urldate}{#1}
+\DeclareFieldFormat{urldate}{%
+	\thefield{urlday}\addslash%
+	\thefield{urlmonth}\addslash%
+	\thefield{urlyear}\isdot}
+
+\renewbibmacro*{url+urldate}{%
+	\iffieldundef{urlyear}
+	{}
+	{\setunit*{\addspace}%
+		\printtext{[Internet]. [}%
+		\printtext{Diunduh tanggal}\space%
+		\printurldate\space
+		\printtext{].}\space%
+		\printfield{url}}%
+}
+\xpatchbibmacro{date+extrayear}{%
+  \printtext[parens]%
+}{%
+  \setunit{\addperiod\space}%
+  \printtext%
+}{}{}
+\nocite{*}
+
+
+%\usepackage[urldate=iso8601, backend=biber, style=authoryear, url=true, doi=true, sorting=nyt]{biblatex}
+%\addbibresource{pustaka.bib}
+%\DefineBibliographyStrings{english}{%
+%	urlseen = {diunduh pada},
+%}
+%\renewbibmacro{in:}{\xspace dalam:}
+%\renewbibmacro*{volume+number+eid}{%
+%	\printfield{volume}%
+%	%  \setunit*{\adddot}% DELETED
+%	\setunit*{\addnbspace}% NEW (optional); there's also \addnbthinspace
+%	\printfield{number}%
+%	\setunit{\addcomma\space}%
+%	\printfield{eid}}
+%\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Projek Akhir Pengenalan Citra Digital (KOM324)} % Journal information
+\Archive{Departemen Ilmu Komputer, FMIPA-IPB} % Departemen ILKOM-IPB
+
+\PaperTitle{\judul} 
+
+%\Authors{\namaMhs, \namaDosen} % Penulis
+\Authors{\namaMhs} % Penulis
+\affiliation{\scriptsize\textbf{Alamat Email}: \emailMhs \normalsize} % Corresponding author
+
+\Keywords{\scriptsize \katakunci \normalsize} 
+\newcommand{\keywordname}{Kata Kunci} % Defines the keywords heading name
+
+\input{abstrak}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	BAGIAN PENDAHULUAN
+%----------------------------------------------------------------------------------------
+
+\input{pendahuluan}
+
+%----------------------------------------------------------------------------------------
+%	BAGIAN METODE
+%----------------------------------------------------------------------------------------
+
+\input{metode}
+
+%----------------------------------------------------------------------------------------
+%	BAGIAN DAFTAR PUSTAKA
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{DAFTAR PUSTAKA}
+\nocite{*}
+\printbibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

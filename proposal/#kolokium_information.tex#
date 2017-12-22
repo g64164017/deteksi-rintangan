@@ -1,0 +1,18 @@
+% Tuliskan nama lengkap Anda
+\def\namaMhs {Nasrul Hamid}
+
+% Tuliskan NIM Anda
+\def\nim {G64164017}
+
+% Tuliskan alamat email Anda
+\def\emailMhs {nasrul_hamid@apps.ipb.ac.id}
+
+% Tuliskan nama lengkap dosen pembimbing
+\def\namaDosen {-}
+
+% Tuliskan judul makalah kolokium di definisi "judul"
+\def\judul {-}
+
+% Tuliskan kata kunci, dipisahkan oleh tanda titik-koma
+\def\katakunci {-; -}
+

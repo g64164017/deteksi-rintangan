@@ -1,0 +1,17 @@
+[1] Config.pm:354> INFO - This is Biber 2.7 (beta)
+[1] Config.pm:357> INFO - Logfile is 'kolokium_ekstensi.blg'
+[55] biber:303> INFO - === Sab Des  9, 2017, 06:04:09
+[78] Biber.pm:360> INFO - Reading 'kolokium_ekstensi.bcf'
+[184] Biber.pm:833> INFO - Using all citekeys in bib section 0
+[207] Biber.pm:3671> INFO - Processing section 0
+[231] Biber.pm:3841> INFO - Looking for bibtex format file 'pustaka.bib' for section 0
+[232] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[239] bibtex.pm:1281> INFO - Found BibTeX data source 'pustaka.bib'
+[249] Utils.pm:164> WARN - month field 'Jul' in entry 'Yi2013' is not an integer - this will probably not sort properly.
+[294] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[295] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[295] Biber.pm:3500> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[295] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
+[301] bbl.pm:608> INFO - Writing 'kolokium_ekstensi.bbl' with encoding 'UTF-8'
+[302] bbl.pm:712> INFO - Output to kolokium_ekstensi.bbl
+[303] Biber.pm:110> INFO - WARNINGS: 1
